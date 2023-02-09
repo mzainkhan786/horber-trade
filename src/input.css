@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar{
+ display: none;
+}
+body{ 
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+
+}
+.box1{
+  position: relative;
+  overflow: hidden;
+
+}
+.box1::after{
+  content: '';
+  display: block;
+  position: absolute; 
+  background-color: rgba(0, 0, 0, 0.836);
+  opacity: 0;
+  top: 0%;
+  z-index: 10;
+  width: 50%;
+  left:-50%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+
+}
+.box1:hover::after{
+opacity: 2;
+left: 0%;
+}
+
+
+.box1::before{
+  content: '';
+  display: block;
+  position: absolute; 
+  background-color: rgba(0, 0, 0, 0.836);
+  opacity:0 ;
+  /* top: 0%; */
+  /* z-index: 10; */
+  width: 50%;
+  right: -50%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.box1:hover::before{
+opacity: 2;
+right:0%;
+}
+.text{
+position: absolute;
+top: 50%;
+transform: translate(-50%,-50%);
+left: 50%;
+opacity: 0;
+z-index: 999;
+color: aliceblue;
+}
+.box1:hover .text{
+  opacity: 1;
+}
+
+
+.text-box:hover .text-box-mini{
+  color: #ffff;
+}
+.text-box:hover .text-box-button{
+  background: #27AAE1;
+}
+.newspagecircle{
+  transform: rotate(180deg);
+  position: absolute;
+  right: 0px;
+  top: 45rem;
+}
+.contant-input:hover{
+outline: none;
+}
+.bet{
+background:  rgba(255, 255, 255, 0.4);
+}
+.bet:hover{
+  background: #fff;
+  color:#00154F;
+}
+
